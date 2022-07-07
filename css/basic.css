@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+body { font-family:'Noto Sans KR',"맑은 고딕", Arial, Helvetica, sans-serif; }
+
+
+
+.header_container { background:#fff; position:fixed; top:0; left:0; width:100%; height:60px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:10000; }
+header { width:1092px; margin:auto; }
+    .header_main { }
+    .header_main h1 { float:left;  margin-top:20px; margin-left:-20px; }
+
+    .header_main h1 a { display: block; width:163px; height:21px; background:url('../img/logo.png') no-repeat; text-indent:-9999px; }
+        .trigger { display:none; }
+
+    .gnb {}
+        .navbar {}
+        .navbar ul.navbar_gnb { margin-left:163px;text-align:center; }
+        .navbar .navbar_gnb > li { display:inline-block;  }
+        .navbar .navbar_gnb > li > a { display:block; padding:0 30px 0 17px; line-height:60px; color:#000; }
+
+        .sub { display:none; position:absolute; top:70px; z-index:1001; }
+        .sub li {}
+        .sub a { color:#fff; display:block; font-size:14px; font-weight:300; padding:10px 30px 0 17px; }
+        .sub a:hover { color:#ce65e1 }
+
+
+
+
+.sub_shadow { display:none; position:absolute; top:60px; width:100%; height:200px; background:rgba(0,0,0,0.7); z-index:1000; }
+
+.visual { text-align:center;}
+.visual_m { display:none; }
+.visual_pc { max-width:100%; }
+
+
+.main_container { }
+
+.search { position:relative; top:-25px; width:650px; margin:auto; border:1px solid #ccc; padding:12px 30px; border-radius:100px; background:#fff; }
+.search ul { display:flex; justify-content:space-between;  }
+.search li { position:relative; }
+.search li:before { position:absolute; left:-25px; content:""; width:1px; height:30px; background:#ccc; }
+    /* position: absolute 쓰는 대신 li들의 기준잡고 위치 설정 */
+    .search li:first-child:before { display:none; }
+    .search a {}
+    .search a .pc {}
+    .search a .mobile { display:none; }
+    
+    
+    .service_wrap { }
+    .service { width:1092px; margin:auto;}
+    .service:after { display:block; content:""; clear:both; }
+    .service .item { float:left; padding:0 8px;}
+    
+    .service .service_item1 { width:50%; }
+    .service_right_wrap { width:50%; float:left; }
+        .service .service_item2 { width:50%; }
+        .service .service_item3 { width:50%; }
+    
+    .service .service_item4 { margin-top:30px;}
+    .service .pc {}
+    .service .mobile { display:none; }
+    
+    .service img { max-width:100%;}
+    
+    .sns_wrap { margin-top:70px; padding:50px 0; background:#ccc; }
+.sns { width:1092px; margin:auto; }
+.sns h3 { font-size:25px; color:#3b3b3b; padding-left:10px;}
+
+.sns .item_wrap { }
+.sns .item_wrap:after { display:block; content:""; clear:both; }
+.sns .item { float:left; width:25%; padding:0 10px; }
+.sns .item a { display:block; margin:10px 0; }
+.sns .thumb { padding-bottom:100%; height:0; }
+.sns .thumb img { width:100%; }
+
+
+.footer_wrap { padding:10px 0; background: #474343;}
+footer { width:1092px; position:relative; margin:auto; }
+footer:after { display:block; content:""; clear:both; }
+    .logo { float:left; }
+
+    .info { float:left; color:#acacac; font-size:12px; margin-left:20px; }
+    .info span { color:#808080;  }
+
+    .link_box { float:right; }
+        .link { display:inline-block; color:#acacac; font-size:12px; margin-right:10px;}
+        .link a { color:#acacac;  }
+
+        .family_site { display:inline-block; }
+        .family_site select { font-size:12px; width:110px; padding-left:10px; background:#fff url('../img/icon_snb_arr.png') no-repeat right center;  appearance:none;}
+        .family_site option {}
+
+
+
+        #popup { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 101; background: rgba(48, 48, 48, 0.3); }
+        .popupWrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; }
+        
+        #popup img { width: 100%; border: 1px solid #474343; }
+        
+        .popupBtns { padding-top: 8px;}
+        .popupBtns  label { float: left; color: #3b3b3b; background: #ccc; border-radius: 5px; border: none; padding:5px 10px;}
+        .popupBtns button { float: right; background: #ccc; border-radius: 5px; border: none; padding:5px 10px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 서브 페이지 */
+.container {  width:1092px; padding: 0 20px; margin: auto; }
+
+.product_container { margin-bottom: 100px; }
+
+.keyvisual { position: relative; height: 170px; background:#ededed; }
+/* 이미지 안나왔는데 html에서 이미지 앞에 경로에 ./를 안해서 */
+.keyvisual .title { position: absolute; top:75px; width: 100%; text-align: center; z-index: 1; }
+.keyvisual h1 { font-size: 48px; font-weight: 500; color: #3b3b3b; }
+.keyvisual .visual { display: table-cell; height: 170px; vertical-align: bottom; } 
+/* 비주얼 안에 있는 요소가 항상 아래쪽에 있게 하는 방법
+display를 테이블셀로 만들어서 vertical-align이 적용되게끔 한다 */
+.keyvisual .visual img { max-width: 100%; }
+
+.sub_nav { border-bottom: 1px solid #ccc;}
+.sub_nav table { margin: auto; }
+/* 테이블만의 독특한 역할? 보더스페이싱-잘쓰진 않음 */
+.sub_nav table td { position: relative; padding: 0 20px; }
+.sub_nav table td a { display: inline-block; padding: 10px; color: #808080; }
+.sub_nav table td.active a { border-bottom: #812990 solid 1px; font-weight: 700; color: #812990; margin-bottom: -1px; }
+/* 회색라인과 보라색라인 겹치지 않는데 margin-bottom: -1px 넣어서 겹치게 */
+.sub_nav table td.active:after { position: absolute; content: ""; width: 22px; height: 5px; bottom: -6px; left: 50%; margin-left: -11px; background: url('../img/sub/icon_snb_arr.png'); }
+/* td의 after이기에 td에 기준 position: relative 적용 bottom: -6px; left: 50%; margin-left: -11px; 위치 설정 */
+
+.content_wrap {}
+.product_cont { position: relative; margin-top: 40px;  }
+.product_title { margin-bottom: 15px; }
+.product_title strong { display: block; font-size: 35px; color: #505050; font-weight: 500; margin-bottom: 5px; }
+/* 줄바꿈이 되야 하니깐 block설정 */
+.product_title span { display: block; color: #646464; font-weight: 300; }
+/* 디스플레이 블락 설정을 해야지 모바일 모드에서 라인하이트가 적용된다 */
+
+.sns_button { position: absolute; right: 0; top: 0; } /* .product_cont position 기준 */
+.sns_button a { padding-left: 3px; }
+.sns_button a:before { display: inline-block; content: ""; width: 1px; height: 13px; background:#777676; margin-right: 3px;} /* 앞쪽에 가상공간 막대기 만들기 */
+.sns_button a:first-child:before { display: none; } /* a의 첫번째 가상공간 막대기 안보이게  */
+
+.title_image {}
+.title_image img { max-width: 100%; }
+
+.find_btn_wrap { padding-top: 50px; text-align: center; }
+/* button이 인라인방식이라서 바로 가운데로 감 */
+.btn { padding: 10px 15px; font-size: 16px; font-weight: 500; background: #fff; }
+.purple { border: 1px solid #812990; color: #812990; }
+
+
+
+
+
+
+
